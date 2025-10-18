@@ -1,0 +1,41 @@
+file permission 
+created a secret.txt ran a ls -l command and saw this 
+
+-rw-rw-rw- 1 codespace codespace 29 Oct 18 10:05 secret.txt
+lets understand this 
+- -> indicates this is file
+rw- -> owner
+rw- -> group
+rw- -> other
+1 -> link count
+codespace codespace -> owner and group names
+29 Oct 18 10:05 -> Modification time
+secret.txt -> file name
+
+we can change the permission of this file using chmod (change mod) command
+
+before running a script we have to make it excutable so we use
+chmod +x test.sh and if you do the ls -l to check the permission
+now instead of rw- it will be rwx and you manually choose who can do what with the file only read or only write or only read execute and so on..
+
+eg 
+chmod 600 secret.txt -> means only i(owner) can read write the file
+chmod 644 secret.txt -> owner can read/write and group and other can only read 
+
+lets understand how just the decimal can change the permission
+we have 3 permission rwx (read write execute)
+Operation	rwx	   	Value
+Read		100 (r--)	 4
+Write		010 (-w-)	 2
+Execute		001 (--x)	 1
+All		111 (rwx)	 7	
+
+chmod 600 means owner has 6 (read + write) group and other has 0 (no access)
+chmod 644 means owner has 6 (read + write) group and otehr has 4 (only read)
+
+never give chmod 777 it will all the access of the file to everyone !!
+
+
+
+
+ 
