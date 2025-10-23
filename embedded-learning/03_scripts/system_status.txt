@@ -1,0 +1,5 @@
+== SYSTEM STATUS ==
+CPU Usage: 9.1%
+Free Memory: 201 MB
+Disk usage: Use
+36%
